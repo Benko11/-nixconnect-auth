@@ -1,16 +1,30 @@
-GET http://localhost:3000/stuff
-
-###
-
-GET http://localhost:3000/
-
-###
-
-POST http://localhost:3000/stuff
+POST http://localhost:3000/users
 Content-Type: application/json
 
-{"name": "Stuff 3"}
+{
+    "nickname": "test5",
+    "password": "safe"
+}
 
 ###
 
-GET http://localhost:3000/stuff/16
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+    "nickname": "benko11",
+    "password": "maelstrom"
+}
+
+###
+
+POST http://localhost:3000/
+
+###
+
+GET http://localhost:3000/auth/secret
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImJlbmtvMTEiLCJpYXQiOjE3MjM3MDg2MDAsImV4cCI6MTcyMzcwODY2MH0.sXsmD1iLkezoJRpJDcr0lmSJE6LzadN96EcwFMlc77w
