@@ -31,10 +31,15 @@ export class StuffService {
     const { rows } = raw;
     const { id } = rows[0];
 
+    return await this.findById(id);
+  }
+
+  async findById(id: number): Promise<StuffDto> | undefined {
     const inserted = await this.client.query(
       'SELECT * FROM stuff WHERE id = $1',
       [id],
     );
+    console.log(inserted);
     return inserted.rows?.[0];
   }
 }

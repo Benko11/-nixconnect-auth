@@ -10,3 +10,7 @@ POST http://localhost:3000/stuff
 Content-Type: application/json
 
 {"name": "Stuff 3"}
+
+###
+
+GET http://localhost:3000/stuff/16
