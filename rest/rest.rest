@@ -27,4 +27,4 @@ POST http://localhost:3000/
 ###
 
 GET http://localhost:3000/auth/secret
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImJlbmtvMTEiLCJpYXQiOjE3MjM3MDg2MDAsImV4cCI6MTcyMzcwODY2MH0.sXsmD1iLkezoJRpJDcr0lmSJE6LzadN96EcwFMlc77w
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImJlbmtvMTEiLCJpYXQiOjE3MjM5MDc5NTYsImV4cCI6MTcyMzkwODAxNn0.To1MfbOZWt3I-AY6-Fg2e2lHlADiFD9nCyXcBjRz4nM
