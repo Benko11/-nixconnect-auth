@@ -11,14 +11,27 @@ export class UsersService {
 
   findAll(): Promise<User[]> {
     return this.usersRepository.findAll({
-      attributes: ['nickname', 'password'],
+      attributes: ['nickname', 'createdAt'],
     });
   }
 
-  async findOne(nickname: string): Promise<User | undefined> {
+  async findByNickname(
+    nickname: string,
+    auth: boolean = true,
+  ): Promise<User | undefined> {
+    const attributes = auth
+      ? ['id', 'nickname', 'password', 'createdAt']
+      : ['nickname', 'createdAt'];
     return await this.usersRepository.findOne({
       where: { nickname },
-      attributes: ['nickname', 'password'],
+      attributes,
+    });
+  }
+
+  async findById(id: number): Promise<User | undefined> {
+    return await this.usersRepository.findOne({
+      where: { id },
+      attributes: ['nickname', 'createdAt'],
     });
   }
 
